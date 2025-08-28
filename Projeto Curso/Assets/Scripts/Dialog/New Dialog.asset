@@ -12,7 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6482fb407ae1e04088a5e52c910a43d, type: 3}
   m_Name: New Dialog
   m_EditorClassIdentifier: 
-  actor: {fileID: 0}
+  actor: {fileID: 5751884598379442556, guid: be21120d203df774f81178f8d38f82be, type: 3}
   speakerSprite: {fileID: 0}
   setence: 
-  dialogues: []
+  dialogues:
+  - actorName: Joana
+    profile: {fileID: 0}
+    setence:
+      portuguese: Oiii
+      english: 
+      spanish: 
+  - actorName: Heroi
+    profile: {fileID: 0}
+    setence:
+      portuguese: Oi, querida
+      english: 
+      spanish: 
