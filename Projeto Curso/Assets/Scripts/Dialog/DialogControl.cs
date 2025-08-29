@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,11 +9,11 @@ public class DialogControl : MonoBehaviour
     [Header("Components")]
     public GameObject dialogObject; // The main dialog box
     public Image profileImage; // The image displayed in the dialog
-    public Text dialogText; // The text content of the dialog
+    public TextMeshProUGUI dialogText; // The text content of the dialog
     public Text nameText; // The name of the character speaking
 
     [Header("Settings")]
-    public float typingSpeed = 0.05f;
+    public float typingSpeed;
     private bool isShowing = false;
     private int index;
     private string[] dialogLines;
@@ -32,6 +33,8 @@ public class DialogControl : MonoBehaviour
             dialogText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+        yield return new WaitForSeconds(1f);
+        NextSentence();
     }
 
     public void NextSentence()
@@ -40,11 +43,17 @@ public class DialogControl : MonoBehaviour
         {
             index++;
             StartCoroutine(TypeLine());
+            return;
         }
-        else
-        {
-            dialogObject.SetActive(false);
-        }
+        DisableDialog();
+    }
+
+    public void DisableDialog()
+    {
+        dialogObject.SetActive(false);
+        isShowing = false;
+        index = 0;
+
     }
 
     public void Speech(string[] txt)
