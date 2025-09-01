@@ -20,11 +20,23 @@ MonoBehaviour:
     profile: {fileID: 0}
     setence:
       portuguese: "Oi!!! Como vai voc\xEA?"
-      english: 
+      english: Helloo!! How are you?
       spanish: 
   - actorName: Heroi
     profile: {fileID: 0}
     setence:
-      portuguese: MUITO BEEEEEEEEm
-      english: 
+      portuguese: Bem !
+      english: I'm good
+      spanish: 
+  - actorName: Joana
+    profile: {fileID: 0}
+    setence:
+      portuguese: Gostando da ilha?
+      english: Are u liking the isle?
+      spanish: 
+  - actorName: Heroi
+    profile: {fileID: 0}
+    setence:
+      portuguese: Sim
+      english: Yeah
       spanish: 

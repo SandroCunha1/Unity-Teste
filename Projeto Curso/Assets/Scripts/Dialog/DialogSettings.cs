@@ -2,8 +2,10 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEditor;
 using System.Collections;
+using System;
+using Unity.VisualScripting;
 
-[CreateAssetMenu(fileName = "New Dialog", menuName ="New Dialog/Dialog")]
+[CreateAssetMenu(fileName = "New Dialog", menuName = "New Dialog/Dialog")]
 public class DialogSettings : ScriptableObject
 {
     [Header("Settigns")]
@@ -31,6 +33,22 @@ public class Languages
     public string portuguese;
     public string english;
     public string spanish;
+
+    public string GetSetenceInConfiguredLanguage()
+    {
+        Language language = Language.pt;
+        switch (language)
+        {
+            case Language.pt:
+                return portuguese;
+            case Language.en:
+                return english;
+            case Language.es:
+                return spanish;
+            default:
+                throw new ArgumentException("Invalid language");
+        }
+    }
 }
 
 #if UNITY_EDITOR
@@ -53,7 +71,7 @@ public class BuilderEditor : Editor
 
         if (GUILayout.Button("Create Dialog"))
         {
-            if(ds.setence != "")
+            if (ds.setence != "")
             {
                 ds.dialogues.Add(s);
 

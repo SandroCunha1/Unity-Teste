@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class DialogControl : MonoBehaviour
 {
-
     [Header("Components")]
     public GameObject dialogObject; // The main dialog box
     public Image profileImage; // The image displayed in the dialog
     public TextMeshProUGUI dialogText; // The text content of the dialog
     public Text nameText; // The name of the character speaking
+    public Button passDialogButton;
 
     [Header("Settings")]
     public float typingSpeed;
@@ -23,6 +23,14 @@ public class DialogControl : MonoBehaviour
     void Awake()
     {
         instance = this;
+    }
+
+    void Update()
+    {
+        if (isShowing && Input.GetKeyDown(KeyCode.Space))
+        {
+            PassDialog();
+        }
     }
 
     IEnumerator TypeLine()
@@ -48,12 +56,21 @@ public class DialogControl : MonoBehaviour
         DisableDialog();
     }
 
+    public void PassDialog()
+    {
+        StopAllCoroutines();
+        dialogText.text = dialogLines[index];
+        NextSentence();
+    }
+
     public void DisableDialog()
     {
         dialogObject.SetActive(false);
         isShowing = false;
         index = 0;
-
+        StopAllCoroutines();
+        dialogText.text = "";
+        dialogLines = null;
     }
 
     public void Speech(string[] txt)
@@ -62,8 +79,8 @@ public class DialogControl : MonoBehaviour
         {
             dialogObject.SetActive(true);
             dialogLines = txt;
-            StartCoroutine(TypeLine());
             isShowing = true;
+            StartCoroutine(TypeLine());
         }
     }
 

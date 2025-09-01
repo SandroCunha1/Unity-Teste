@@ -20,6 +20,7 @@ public class NPCDialog : MonoBehaviour
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             DialogControl.instance.Speech(dialogLines.ToArray());
+
         }
     }
 
@@ -27,7 +28,7 @@ public class NPCDialog : MonoBehaviour
     {
         for (int i = 0; i < dialogSettings.dialogues.Count; i++)
         {
-            dialogLines.Add(dialogSettings.dialogues[i].setence.portuguese);
+            dialogLines.Add(dialogSettings.dialogues[i].setence.GetSetenceInConfiguredLanguage());
         }
     }
 
@@ -45,7 +46,7 @@ public class NPCDialog : MonoBehaviour
             return;
         }
         playerInRange = false;
-        DialogControl.instance.dialogObject.SetActive(false);
+        DialogControl.instance.DisableDialog();
     }
 
     void OnDrawGizmosSelected()
