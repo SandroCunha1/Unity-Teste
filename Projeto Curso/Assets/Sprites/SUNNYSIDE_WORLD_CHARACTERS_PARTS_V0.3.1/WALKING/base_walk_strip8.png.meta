@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,10 +124,10 @@ TextureImporter:
       name: base_walk_strip8_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 24
-        width: 13
-        height: 17
+        x: 0
+        y: 0
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,10 +146,10 @@ TextureImporter:
       name: base_walk_strip8_1
       rect:
         serializedVersion: 2
-        x: 138
-        y: 24
-        width: 13
-        height: 16
+        x: 96
+        y: 0
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: base_walk_strip8_2
       rect:
         serializedVersion: 2
-        x: 234
-        y: 24
-        width: 13
-        height: 17
+        x: 192
+        y: 0
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: base_walk_strip8_3
       rect:
         serializedVersion: 2
-        x: 330
-        y: 24
-        width: 13
-        height: 18
+        x: 288
+        y: 0
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: base_walk_strip8_4
       rect:
         serializedVersion: 2
-        x: 426
-        y: 24
-        width: 13
-        height: 17
+        x: 384
+        y: 0
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: base_walk_strip8_5
       rect:
         serializedVersion: 2
-        x: 522
-        y: 24
-        width: 13
-        height: 16
+        x: 480
+        y: 0
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,10 +256,10 @@ TextureImporter:
       name: base_walk_strip8_6
       rect:
         serializedVersion: 2
-        x: 618
-        y: 24
-        width: 13
-        height: 17
+        x: 576
+        y: 0
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: base_walk_strip8_7
       rect:
         serializedVersion: 2
-        x: 714
-        y: 24
-        width: 13
-        height: 18
+        x: 672
+        y: 0
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,7 +300,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: afe9c4d3688c7364aa9de7de25466423
     internalID: 0
     vertices: []
     indices: 
@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      base_walk_strip8_0: -1737598524080498344
+      base_walk_strip8_1: -8522627396629037226
+      base_walk_strip8_2: 6999510798459091389
+      base_walk_strip8_3: -27604772618167018
+      base_walk_strip8_4: 4549400451008100615
+      base_walk_strip8_5: 951739465742405775
+      base_walk_strip8_6: -3020992744206059292
+      base_walk_strip8_7: 3277107353622960758
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
